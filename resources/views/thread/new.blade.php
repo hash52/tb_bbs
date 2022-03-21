@@ -1,6 +1,5 @@
 @extends('layouts.app')
 @section('content')
-<div class="container">
     <form method="POST" action="{{ action('ThreadController@create') }}">
         @csrf
     
@@ -29,5 +28,4 @@
             </div>
         </div>
     </form>
-</div>
 @endsection

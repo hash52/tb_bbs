@@ -19,6 +19,11 @@ class ThreadController extends Controller
         $thread->fill($request->all());
         $thread->user_id = Auth::id();
         $thread->save();
-        return redirect()->back();
+        return redirect('/');
+    }
+    
+    public function index()
+    {
+        return view('thread.index', ['threads' => Thread::all()]);
     }
 }
