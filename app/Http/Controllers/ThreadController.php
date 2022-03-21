@@ -26,4 +26,9 @@ class ThreadController extends Controller
     {
         return view('thread.index', ['threads' => Thread::all()]);
     }
+    
+    public function show(Request $request)
+    {
+        return view('thread.show', ['thread' => Thread::find($request->id)]);
+    }
 }
