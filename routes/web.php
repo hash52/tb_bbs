@@ -22,3 +22,5 @@ Route::group(['prefix'=>'threads'], function () {
     });
     Route::get('show', 'ThreadController@show');
 });
+
+Route::post('posts/new', 'PostController@create');
